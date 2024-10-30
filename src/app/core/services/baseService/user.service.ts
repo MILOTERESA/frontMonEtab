@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LocalstorageService } from './localstorage.service';
+import {LocalstorageService} from './Localstorage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +7,11 @@ import { LocalstorageService } from './localstorage.service';
 export class UserService {
 
   constructor(private localStorageService: LocalstorageService) { }
-  
+
   isAuthenticated() {
-  
+
     const token = this.localStorageService.getToken() !== null;
-    
+
     if (token) {
       return true;
     }
